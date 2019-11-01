@@ -12,7 +12,6 @@ class ListArticles extends Component {
   }
 
   componentDidMount() {
-  debugger
     this.getArticles()
   }
 
@@ -34,13 +33,12 @@ class ListArticles extends Component {
       this.setErrorMessage(result.error_message)
     } else {
       this.setState({
-        articles: result
+        articles: result.data
       })
     }
   }
 
-   renderArticleHandler = (chosenArticle) => {
-  debugger
+  renderArticleHandler = (chosenArticle) => {
      this.setState({
        renderArticle: true,
        chosenArticleId: chosenArticle 
@@ -59,11 +57,10 @@ class ListArticles extends Component {
     }
   if (articleData.length !== 0) {
       if (renderArticle === false) {
-        debugger
         renderListArticles = (
           <>
-            {articleData.data.map(article => {
-              return <div id={`article_${article.id}`} onClick={this.renderArticleHandler(article.id)} key={article.id}>
+            {articleData.map(article => {
+              return <div id={`article_${article.id}`} onClick={() => {this.renderArticleHandler(article.id)}} key={article.id}>
                 <Item.Group> 
                   <Item>
                     <Item.Image size='tiny' src='https://react.semantic-ui.com/images/wireframe/image.png' />
@@ -82,7 +79,6 @@ class ListArticles extends Component {
       }
     }
     if (renderArticle === true) {
-      debugger
       specificArticle = (
         <ViewArticle
           chosenArticle = {this.state.chosenArticleId}

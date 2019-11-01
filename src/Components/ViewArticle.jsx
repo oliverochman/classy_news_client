@@ -8,7 +8,6 @@ class ViewArticle extends Component {
   }
 
   async componentDidMount() {
-  debugger
     let response = await getArticle(this.props.chosenArticle)
     if (response.status === 200) {
       this.setState({
@@ -25,7 +24,7 @@ class ViewArticle extends Component {
 
     if (article !== null) {
       singleArticle = (
-        <div id="chosen-article">
+        <div id="single-article">
           <Container>
             <Item.Group> 
               <Item>
