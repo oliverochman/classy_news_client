@@ -8,8 +8,9 @@ class ListArticles extends Component {
     error_message: null
   }
 
-  componentDidMount() {
-    this.getArticles()
+  async componentDidMount() {
+    const language = await navigator.language.split('-')[0]
+    this.getArticles(language)
   }
 
   makeIngress = (content, wordcount) => {
@@ -17,8 +18,8 @@ class ListArticles extends Component {
     return ingress + ' ...'
   }
 
-  async getArticles() {
-    let result = await getData()
+  async getArticles(language) {
+    let result = await getData(language)
 
     if (result.status === 400) {
       this.setState({

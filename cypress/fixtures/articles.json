@@ -5,7 +5,9 @@
     "content": "The Louvre museum in Paris, home to Leonardo's Mona Lisa, opens its doors on Thursday to a display of more than 160 Renaissance-era paintings and drawings",
     "author": "Lauren Lion",
     "image": "https://t3.ftcdn.net/jpg/02/48/42/64/240_F_248426448_NVKLywWqArG2ADUxDq6QprtIzsF82dMF.jpg",
-    "publish_date": "20 October 2019"
+    "publish_date": "20 October 2019",
+    "language": "en"
+
   },
   {
     "id": 2,
@@ -13,6 +15,7 @@
     "content": "Some good content",
     "author": "Some awesome author",
     "image": "https://t3.ftcdn.net/jpg/02/48/42/64/240_F_248426448_NVKLywWqArG2ADUxDq6QprtIzsF82dMF.jpg",
-    "publish_date": "20 October 2019"
+    "publish_date": "20 October 2019",
+    "language": "sp"
   }
 ]
